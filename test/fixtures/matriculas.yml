@@ -1,9 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 ynes_nataction:
-  alumno_id: ynes
-  curso_id: natacion
+  alumno: ynes
+  curso: natacion
 
 alberto_tenis:
-  alumno_id: alberto
-  curso_id: tenis
+  alumno: alberto
+  curso: tenis
+  
+ynes_tenis:
+  alumno: ynes
+  curso: tenis
