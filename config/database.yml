@@ -16,13 +16,13 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
   adapter: mysql
-  encoding: utf8
-  reconnect: false
+  #encoding: utf8
+  #reconnect: false
   database: schedule_development
   pool: 5
   username: root
-  password: balto
-  socket: /var/run/mysqld/mysqld.sock
+  #password: balto
+  #socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -30,12 +30,12 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  reconnect: false
+  #reconnect: false
   database: schedule_test
   pool: 5
   username: root
-  password: balto
-  socket: /var/run/mysqld/mysqld.sock
+ # password: balto
+  #socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql

@@ -3,11 +3,7 @@
 one:
   nombre: MyString
   descripcion: MyString
-  hora_inicio: 
-  hora_final: 
 
 two:
   nombre: MyString
   descripcion: MyString
-  hora_inicio: 
-  hora_final: 

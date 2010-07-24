@@ -3,7 +3,7 @@ class CreateMatriculas < ActiveRecord::Migration
     create_table :matriculas do |t|
       t.integer :alumno_id, :null => false, :options=>
       "CONSTRAINT fk_matricula_alumnos REFERENCES alumnos(id)"
-      t.integer :curso_id, :null => false, :opcions=>
+      t.integer :curso_id, :null => false, :options=>
       "CONSTRAINT fk_matricula_cursos REFERENCES cursos(id)"
 
       t.timestamps
