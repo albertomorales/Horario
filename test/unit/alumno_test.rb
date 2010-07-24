@@ -1,8 +1,19 @@
 require 'test_helper'
 
 class AlumnoTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  context "Un Alumno" do
+    
+    setup do
+      @alberto = Alumno.find(:first, :conditions => ["nombre = ?", 'Alberto'])
+    end
+    
+    should "find Alberto" do
+      assert_equal 'Alberto', @alberto.nombre
+    end
+    
   end
+  
+  
+  
 end

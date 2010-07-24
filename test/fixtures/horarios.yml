@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  dia: MyString
+  dia: Lunes
   hora: 2010-07-24 01:37:03
   duracion: 2010-07-24 01:37:03
+  curso: :natacion
 
 two:
-  dia: MyString
-  hora: 2010-07-24 01:37:03
-  duracion: 2010-07-24 01:37:03
+  dia: Lunes
+  hora: 2010-07-24 03:37:03
+  duracion: 2010-07-24 02:37:03
+  curso: :tenis

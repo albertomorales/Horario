@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  alumno_id: 1
-  curso_id: 1
+ynes_nataction:
+  alumno_id: ynes
+  curso_id: natacion
 
-two:
-  alumno_id: 1
-  curso_id: 1
+alberto_tenis:
+  alumno_id: alberto
+  curso_id: tenis

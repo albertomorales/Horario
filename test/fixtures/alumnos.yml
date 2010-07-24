@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  nombre: MyString
-  email: MyString
+alberto:
+  nombre: Alberto
+  email: amorales@opnet.com
 
-two:
-  nombre: MyString
-  email: MyString
+ynes:
+  nombre: Ynes
+  email: Alarcon

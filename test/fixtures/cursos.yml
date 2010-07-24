@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  nombre: MyString
-  descripcion: MyString
+tenis:
+  nombre: Tenis
+  descripcion: Clase de tenis
 
-two:
-  nombre: MyString
-  descripcion: MyString
+natacion:
+  nombre: Natacion
+  descripcion: Clase de natacion

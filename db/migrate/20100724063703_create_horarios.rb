@@ -4,7 +4,6 @@ class CreateHorarios < ActiveRecord::Migration
       t.string :dia
       t.time :hora
       t.time :duracion
-
       t.timestamps
     end
   end
