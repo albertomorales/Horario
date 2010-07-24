@@ -1,0 +1,19 @@
+<h1>New matricula</h1>
+
+<% form_for(@matricula) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :alumno_id %><br />
+    <%=f.select :alumno_id, Matricula.nombre_alumno      %>
+  </p>
+  <p>
+    <%= f.label :curso_id %><br />
+    <%= f.select :curso_id, Matricula.nombre_curso  %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', matriculas_path %>

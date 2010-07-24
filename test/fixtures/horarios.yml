@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dia: MyString
+  hora: 2010-07-24 01:37:03
+  duracion: 2010-07-24 01:37:03
+
+two:
+  dia: MyString
+  hora: 2010-07-24 01:37:03
+  duracion: 2010-07-24 01:37:03

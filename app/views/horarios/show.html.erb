@@ -1,0 +1,18 @@
+<p>
+  <b>Dia:</b>
+  <%=h @horario.dia %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%=h @horario.hora %>
+</p>
+
+<p>
+  <b>Duracion:</b>
+  <%=h @horario.duracion %>
+</p>
+
+
+<%= link_to 'Edit', edit_horario_path(@horario) %> |
+<%= link_to 'Back', horarios_path %>

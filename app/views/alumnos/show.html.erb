@@ -1,0 +1,13 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @alumno.nombre %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @alumno.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_alumno_path(@alumno) %> |
+<%= link_to 'Back', alumnos_path %>

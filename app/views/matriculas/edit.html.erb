@@ -1,0 +1,20 @@
+<h1>Editing matricula</h1>
+
+<% form_for(@matricula) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :alumno_id %><br />
+    <%= f.text_field :alumno_id %>
+  </p>
+  <p>
+    <%= f.label :curso_id %><br />
+    <%= f.text_field :curso_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @matricula %> |
+<%= link_to 'Back', matriculas_path %>

@@ -1,0 +1,20 @@
+<h1>Editing alumno</h1>
+
+<% form_for(@alumno) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @alumno %> |
+<%= link_to 'Back', alumnos_path %>
