@@ -2,6 +2,10 @@
 
 <% form_for(@horario) do |f| %>
   <%= f.error_messages %>
+<p>
+    <%= f.label :curso_id %><br />
+    <%= f.text_field :curso_id %>
+  </p>
 
   <p>
     <%= f.label :dia %><br />
@@ -9,11 +13,11 @@
   </p>
   <p>
     <%= f.label :hora %><br />
-    <%= f.time_select :hora %>
+    <%= f.text_field :hora %>
   </p>
   <p>
     <%= f.label :duracion %><br />
-    <%= f.time_select :duracion %>
+    <%= f.text_field :duracion %>
   </p>
   <p>
     <%= f.submit 'Create' %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100724203522) do
+ActiveRecord::Schema.define(:version => 20100729081216) do
 
   create_table "alumnos", :force => true do |t|
     t.string   "nombre"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20100724203522) do
 
   create_table "horarios", :force => true do |t|
     t.string   "dia"
-    t.time     "hora"
-    t.time     "duracion"
+    t.decimal  "hora",       :precision => 4, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "duracion",   :precision => 4, :scale => 2, :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "curso_id"

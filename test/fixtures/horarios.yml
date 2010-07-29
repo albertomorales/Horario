@@ -2,12 +2,12 @@
 
 one:
   dia: Lunes
-  hora: 2010-07-24 01:37:03
-  duracion: 2010-07-24 02:37:03
+  hora:  03.00
+  duracion: 04.00
   curso: :natacion
 
 two:
   dia: Lunes
-  hora: 2010-07-24 02:30:03
-  duracion: 2010-07-24 03:37:03
+  hora: 03.30
+  duracion: 04.30
   curso: :tenis

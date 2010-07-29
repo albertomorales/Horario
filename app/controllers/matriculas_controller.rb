@@ -41,8 +41,9 @@ class MatriculasController < ApplicationController
   # POST /matriculas.xml
   def create
     @matricula = Matricula.new(params[:matricula])
-
+   
     respond_to do |format|
+    if @matricula.que_no_tenga_conflicto_con(@matricula)
       if @matricula.save
         format.html { redirect_to(@matricula, :notice => 'Matricula was successfully created.') }
         format.xml  { render :xml => @matricula, :status => :created, :location => @matricula }
@@ -50,6 +51,10 @@ class MatriculasController < ApplicationController
         format.html { render :action => "new" }
         format.xml  { render :xml => @matricula.errors, :status => :unprocessable_entity }
       end
+    else
+      format.html {redirect_to(@matricula, :notice => 'Conflicto con el horario')}
+    end
+          
     end
   end
 
