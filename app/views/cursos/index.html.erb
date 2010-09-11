@@ -1,4 +1,4 @@
-<h1>Listing cursos</h1>
+<h1>Lista de cursos</h1>
 
 <table>
   <tr>
@@ -14,6 +14,8 @@
     <td><%= link_to 'Show', curso %></td>
     <td><%= link_to 'Edit', edit_curso_path(curso) %></td>
     <td><%= link_to 'Destroy', curso, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Horario', :controller => 'matriculas', :action => 'cuadro_horario' , :cur_id => curso.id%></td>
+
   </tr>
 <% end %>
 </table>

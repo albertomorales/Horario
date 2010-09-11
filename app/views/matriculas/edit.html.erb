@@ -5,11 +5,13 @@
 
   <p>
     <%= f.label :alumno_id %><br />
-    <%= f.text_field :alumno_id %>
+    <%=Alumno.find(@matricula.alumno_id).nombre %>
   </p>
   <p>
     <%= f.label :curso_id %><br />
-    <%= f.text_field :curso_id %>
+    <%= f.select :curso_id, nombre_curso  %>
+     <td><%= f.submit 'ver_horario' %></td>
+
   </p>
   <p>
     <%= f.submit 'Update' %>

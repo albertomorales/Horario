@@ -2,18 +2,23 @@
 
 <% form_for(@horario) do |f| %>
   <%= f.error_messages %>
+<p>
+    <%= f.label :curso_id %><br />
+    <%= f.select :curso_id, nombre_curso  %>
+  </p>
 
   <p>
     <%= f.label :dia %><br />
-    <%= f.text_field :dia %>
+    <%= f.select  :dia, dias_semana %>
   </p>
   <p>
     <%= f.label :hora %><br />
-    <%= f.text_field :hora %>
+    <%= f.select :hora, d_horas %>
   </p>
   <p>
-    <%= f.label :duracion %><br />
-    <%= f.text_field :duracion %>
+    <%= f.label :hora_f %><br />
+  
+    <%= f.select :hora_f, d_horas%>
   </p>
   <p>
     <%= f.submit 'Update' %>

@@ -7,45 +7,35 @@ class Matricula < ActiveRecord::Base
   
   named_scope :para_el_alumno, lambda {|alumno| {:conditions => ["matriculas.alumno_id = ?", alumno.id]}}
  
-     LISTA_CURSOS= []
-    LISTA_ALUMNOS = []
+
     range = (0..0)
 
-def self.nombre_curso
-
-    items= Curso.find_by_sql("select * from cursos")
-    items.each do |iter|
-      LISTA_CURSOS << [iter.nombre, iter.id]
-       end
-    LISTA_CURSOS
-end
-  
-def self.nombre_alumno
+def ultimo_alumno
+ return    Alumno.find(:last)
    
-     items= Alumno.find_by_sql("select * from alumnos")
-     items.each do |iter|
-       LISTA_ALUMNOS << [ iter.nombre ,iter.id]
-       end        
-   LISTA_ALUMNOS
-end
+end 
     
   def que_no_tenga_conflicto_con(otra_matricula)
     
-      todas_matriculas = Matricula.find(:all)
+      todas_matriculas = Matricula.find_all_by_alumno_id(otra_matricula.alumno_id)
+    if todas_matriculas
       todas_matriculas.each do |iter|
+
          if iter.curso_id != otra_matricula.curso_id
 
-              
+             
                horas = Horario.find_all_by_curso_id(iter.curso_id)
                horas_otra = Horario.find_all_by_curso_id(otra_matricula.curso_id)
-               #debugger
+             
                horas.each do |iter_h|
                  horas_otra.each do |iter_h_o|
+
                    if iter_h.dia == iter_h_o.dia
-                         range =(iter_h.hora..iter_h.duracion)
-                          range2 = (iter_h_o.hora.. iter_h_o.duracion)
-                          #debugger
+                          range =(iter_h.hora..iter_h.hora_f)
+                          range2 = (iter_h_o.hora.. iter_h_o.hora_f)
+                         
                          if range.intersection(range2)!= nil
+                    #    debugger 
                            return false 
                            
                           end
@@ -55,13 +45,13 @@ end
 
                end
          else
-      
+         return false
          end
 
       end
 
-
-    return false
+    end
+    return true
 
 
     

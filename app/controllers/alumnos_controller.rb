@@ -24,6 +24,7 @@ class AlumnosController < ApplicationController
   # GET /alumnos/new
   # GET /alumnos/new.xml
   def new
+
     @alumno = Alumno.new
 
     respond_to do |format|
@@ -41,10 +42,9 @@ class AlumnosController < ApplicationController
   # POST /alumnos.xml
   def create
     @alumno = Alumno.new(params[:alumno])
-
-    respond_to do |format|
+     respond_to do |format|
       if @alumno.save
-        format.html { redirect_to(@alumno, :notice => 'Alumno was successfully created.') }
+        format.html { redirect_to(:controller => "matriculas", :action => "new") }
         format.xml  { render :xml => @alumno, :status => :created, :location => @alumno }
       else
         format.html { render :action => "new" }
@@ -73,6 +73,10 @@ class AlumnosController < ApplicationController
   # DELETE /alumnos/1.xml
   def destroy
     @alumno = Alumno.find(params[:id])
+    @matriculas = Matricula.find_all_by_alumno_id(params[:id])
+     @matriculas.each do |iter|
+    iter.destroy
+    end
     @alumno.destroy
 
     respond_to do |format|

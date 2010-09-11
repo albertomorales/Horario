@@ -1,0 +1,21 @@
+
+  
+  <%  @prueba = cuadro_h %>
+  <table border = "1">
+
+    <% d_horas.each_with_index do |c, i|  %>
+      <tr>
+        <td> <%= c %> </td>
+     
+
+        <% dias_semana.each do |f| %>
+          
+          <td>
+            <%=@c_horarios[f][c] %>
+            </td>
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+  <%= link_to 'Back', :back %>
+

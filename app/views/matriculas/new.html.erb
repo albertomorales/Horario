@@ -1,19 +1,20 @@
-<h1>New matricula</h1>
-
+<h1>Escoger curso y horario</h1>
 <% form_for(@matricula) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :alumno_id %><br />
-    <%=f.select :alumno_id, Matricula.nombre_alumno      %>
+    <%= @matricula.ultimo_alumno.nombre    %>
   </p>
   <p>
     <%= f.label :curso_id %><br />
-    <%= f.select :curso_id, Matricula.nombre_curso  %>
+    <%= f.select :curso_id, nombre_curso  %>
+    <td><%= f.submit 'ver_horario', :controller => 'matricula', :action => 'cuadro_horario' %></td>
+   
   </p>
   <p>
     <%= f.submit 'Create'%>
   </p>
 <% end %>
-
+ 
 <%= link_to 'Back', matriculas_path %>

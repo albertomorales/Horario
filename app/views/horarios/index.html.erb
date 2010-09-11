@@ -4,14 +4,14 @@
   <tr>
     <th>Dia</th>
     <th>Hora</th>
-    <th>Duracion</th>
+    <th>Hora Final</th>
   </tr>
 
 <% @horarios.each do |horario| %>
   <tr>
     <td><%=h horario.dia %></td>
     <td><%=h horario.hora %></td>
-    <td><%=h horario.duracion %></td>
+    <td><%=h horario.hora_f %></td>
     <td><%= link_to 'Show', horario %></td>
     <td><%= link_to 'Edit', edit_horario_path(horario) %></td>
     <td><%= link_to 'Destroy', horario, :confirm => 'Are you sure?', :method => :delete %></td>

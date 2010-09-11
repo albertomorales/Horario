@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :horarios
 
-  map.resources :matriculas
+  map.resources :matriculas, :collection => {:cuadro_horario => :get}
 
   map.resources :cursos
 
